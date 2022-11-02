@@ -36,7 +36,8 @@ public class BookMyInterviewApplication {
 		{
 			String emailServiceResponce= template.getForObject("http:/localhost:8181/emailService/send", String.class);
 			String paymentServiceResponce= template.getForObject("http:/localhost:8282/paymentService/pay", String.class);
-			return emailServiceResponce+"\n"+paymentServiceResponce; 
+			System.out.println("Akash Gupta");
+			return emailServiceResponce+"\n"+paymentServiceResponce;
 		}
 	
 	
@@ -56,4 +57,5 @@ public class BookMyInterviewApplication {
 	public RestTemplate template() {
     return  new RestTemplate();
 }
+
 	}
